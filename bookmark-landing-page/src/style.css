@@ -215,3 +215,12 @@
 .feature__tab.active {
   color: var(--Blue-950);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
