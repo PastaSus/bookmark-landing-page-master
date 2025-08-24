@@ -14,7 +14,7 @@
         class="xl relative container mx-auto grid max-w-80 py-9 md:max-w-176 lg:flex lg:max-w-220 lg:justify-between xl:max-w-290 xl:py-11"
       >
         <div class="flex items-start justify-between self-start lg:self-center">
-          <a href="#" aria-label="Bookmark homepage" class="relative z-2">
+          <a href="#" aria-label="Back to Homepage" class="relative z-2">
             <svg
               width="148"
               height="25"
@@ -101,10 +101,10 @@
           class="header__socials absolute -bottom-125 z-2 mt-auto hidden items-center justify-center gap-10 justify-self-center"
         >
           <a class="" href="#features">
-            <img src="./images/icon-facebook.svg" alt="facebook logo" />
+            <img src="./images/icon-facebook.svg" alt="Go to facebook page" />
           </a>
           <a class="" href="#features">
-            <img src="./images/icon-twitter.svg" alt=" twitter logo" />
+            <img src="./images/icon-twitter.svg" alt="Go to twitter page" />
           </a>
         </div>
       </nav>
@@ -114,7 +114,7 @@
       <!-- Hero -->
       <section
         class="hero relative overflow-hidden text-center md:text-start xl:mt-8 xl:grid xl:min-h-[82vh]"
-        id="hero"
+        aria-labelledby="main-heading"
       >
         <div
           class="md:grid md:grid-cols-2 xl:mx-auto xl:max-w-290 xl:grid-cols-[35rem_auto] xl:content-center"
@@ -137,6 +137,7 @@
             <div class="mt-12 xl:mt-20">
               <h1
                 class="text-3xl font-medium text-[var(--Blue-950)] lg:text-5xl xl:text-[3rem]"
+                id="main-heading"
               >
                 A Simple Bookmark Manager
               </h1>

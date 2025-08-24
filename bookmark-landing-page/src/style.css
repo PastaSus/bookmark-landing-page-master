@@ -113,27 +113,6 @@
 
     --Grey-50: hsl(0, 0%, 90%);
     --Blue-950: hsl(229, 31%, 21%);
-
-    /*Clamping/Scaling Typo scale */
-
-    --clamp-font-20: clamp(1.25rem, 2vw, 1.5rem); /* 20px → scales to 24px */
-    --clamp-font-24: clamp(1.5rem, 2.5vw, 1.875rem); /* 24px → scales to 30px */
-    --clamp-font-30: clamp(1.875rem, 3vw, 2.25rem); /* 30px → scales to 36px */
-    --clamp-font-36: clamp(2.25rem, 3.5vw, 2.75rem); /* 36px → scales to 44px */
-    --clamp-font-44: clamp(2.75rem, 4vw, 3.25rem); /* 44px → scales to 52px */
-    --clamp-font-52: clamp(3.25rem, 5vw, 3.875rem); /* 52px → scales to 62px */
-    --clamp-font-62: clamp(3.875rem, 6vw, 4.625rem); /* 62px → scales to 74px */
-    --clamp-font-74: clamp(4.625rem, 7vw, 5.375rem); /* 74px → scales to 86px */
-    --clamp-font-86: clamp(5.375rem, 8vw, 6.125rem); /* 86px → scales to 98px */
-    --clamp-font-98: clamp(6.125rem, 9vw, 7rem); /* 98px → scales to 112px */
-
-    /* Clamp variations */
-    --clamp-font-24-v2: clamp(
-      1.5rem,
-      2.5vw,
-      2.75rem
-    ); /* 24px → scales to 44px */
-    --clamp-font-24-v3: clamp(1.5rem, 3vw, 3rem); /* 24px → scales to 48px */
   }
 }
 
@@ -216,11 +195,14 @@
   color: var(--Blue-950);
 }
 
+/* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation: none !important;
-    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
