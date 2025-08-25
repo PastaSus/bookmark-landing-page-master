@@ -133,7 +133,7 @@ function trapFocus(container) {
   const lastEl = navFocusables[navFocusables.length - 1];
 
   function handleNavTrap(e) {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth <= 768;
 
     if (e.key !== "Tab") return;
 
@@ -158,3 +158,7 @@ function trapFocus(container) {
 
   return () => container.removeEventListener("keydown", handleNavTrap);
 }
+
+// update form validation dialog to be alert
+// combine hover and focus state on elements
+// test with NVDA also

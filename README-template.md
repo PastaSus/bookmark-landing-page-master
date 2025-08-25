@@ -47,6 +47,7 @@ Users should be able to:
 - Tailwind
 - Vite
 - Vercel
+- Axe Dev Tools
 
 ### What I learned
 

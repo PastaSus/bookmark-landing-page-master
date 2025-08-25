@@ -12,7 +12,8 @@
       rel="stylesheet"
     />
 
-    <link href="/src/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" type="text/css" />
+
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body>
@@ -135,28 +136,28 @@
     <main class="xl:text-lg">
       <!-- Hero -->
       <section
-        class="hero relative text-center md:text-start xl:mt-8 xl:grid xl:min-h-[82vh]"
+        class="hero relative h-164 overflow-x-hidden text-center md:h-87 md:text-start lg:h-100 xl:mt-8 xl:grid xl:min-h-[82vh]"
         aria-labelledby="main-heading"
       >
         <div
           class="md:grid md:grid-cols-2 xl:mx-auto xl:max-w-290 xl:grid-cols-[35rem_auto] xl:content-center"
         >
-          <div class="relative md:self-center">
-            <div
-              class="mx-auto mt-9 max-w-90 lg:max-w-125 xl:mt-0 xl:w-180 xl:max-w-300"
-            >
-              <img
-                class="xl:ml-auto xl:w-175"
-                src="./images/illustration-hero.svg"
-                alt=""
-              />
-            </div>
+          <!-- <div class=""> -->
+          <div
+            class="relative mx-auto mt-12 max-w-90 md:self-center lg:max-w-125 xl:mt-0 xl:w-180 xl:max-w-300"
+          >
+            <img
+              class="xl:ml-auto xl:w-175"
+              src="./images/illustration-hero.svg"
+              alt=""
+            />
           </div>
+          <!-- </div> -->
 
           <div
             class="mx-auto max-w-80 md:row-1 lg:max-w-96 xl:mx-0 xl:max-w-135"
           >
-            <div class="mt-12 xl:mt-20">
+            <div class="mt-14 xl:mt-20">
               <h1
                 class="text-3xl font-medium text-[var(--Blue-950)] lg:text-5xl xl:text-[3rem]"
                 id="main-heading"
@@ -172,19 +173,19 @@
             <div class="mt-8 flex gap-4">
               <a
                 href="#"
-                class="btn btn--cta border-2 border-transparent bg-[var(--Blue-600)] px-3 py-3 font-normal text-white shadow-lg lg:hover:border-[var(--Blue-600)] lg:hover:bg-transparent lg:hover:text-[var(--Blue-600)]"
+                class="btn btn--cta border-2 border-transparent bg-[var(--Blue-600)] px-3 py-3 font-normal text-white shadow-lg [&:hover,&:focus]:border-[var(--Blue-600)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-600)]"
                 >Get it on Chrome</a
               >
               <a
                 href="#"
-                class="btn btn--cta lg:hover:bg border-2 border-transparent bg-[var(--Grey-50)] px-3 py-3 font-normal text-[var(--Blue-950)] shadow-lg lg:hover:border-[var(--Blue-950)] lg:hover:bg-transparent lg:hover:text-[var(--Blue-950)]"
+                class="btn btn--cta lg:hover:bg border-2 border-transparent bg-[var(--Grey-50)] px-3 py-3 font-normal text-[var(--Blue-950)] shadow-lg [&:hover,&:focus]:border-[var(--Blue-950)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-950)]"
                 >Get it on Firefox</a
               >
             </div>
           </div>
         </div>
         <div
-          class="purple-bg top-1/10 md:top-1/3 md:right-[-64%] xl:top-[33%] xl:h-90"
+          class="purple-bg md:top-1/3 md:right-[-64%] lg:h-66.5 xl:top-[33%] xl:h-90"
         ></div>
       </section>
 
@@ -219,7 +220,7 @@
               role="tab"
               aria-selected="true"
               aria-controls="panel-simple-bookmarking"
-              class="feature__tab active inline-block cursor-pointer py-4 text-gray-500 md:w-full md:scale-100 lg:hover:text-[var(--Red-400)] xl:py-6"
+              class="feature__tab active inline-block cursor-pointer py-4 text-gray-500 md:w-full md:scale-100 xl:py-6 [&:hover,&:focus]:text-[var(--Red-400)]"
               type="button"
             >
               Simple Bookmarking
@@ -231,7 +232,7 @@
               role="tab"
               aria-selected="false"
               aria-controls="panel-speedy-searching"
-              class="feature__tab inline-block cursor-pointer py-4 text-gray-500 md:w-full lg:hover:text-[var(--Red-400)] xl:py-6"
+              class="feature__tab inline-block cursor-pointer py-4 text-gray-500 md:w-full xl:py-6 [&:hover,&:focus]:text-[var(--Red-400)]"
               type="button"
             >
               Speedy Searching
@@ -243,7 +244,7 @@
               role="tab"
               aria-selected="false"
               aria-controls="panel-easy-sharing"
-              class="feature__tab inline-block cursor-pointer py-4 text-gray-500 md:w-full lg:hover:text-[var(--Red-400)] xl:py-6"
+              class="feature__tab inline-block cursor-pointer py-4 text-gray-500 md:w-full xl:py-6 [&:hover,&:focus]:text-[var(--Red-400)]"
               type="button"
             >
               Easy Sharing
@@ -273,7 +274,6 @@
                   class="feature__panel-image md:justify-self-center xl:w-150"
                 />
 
-                <!--  -->
                 <div class="feature__panel-text xl:ml-23 xl:max-w-107">
                   <h3
                     class="mt-18 text-2xl font-medium text-[var(--Blue-950)] xl:text-3xl"
@@ -287,7 +287,7 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn--more-info hidden rounded-md bg-[var(--Blue-600)] px-5 py-3 text-white lg:mt-6 lg:inline-block"
+                    class="btn btn--more-info hidden rounded-md border-2 border-transparent bg-[var(--Blue-600)] px-5 py-3 text-white lg:mt-6 lg:inline-block [&:hover,&:focus]:border-[var(--Blue-600)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-600)]"
                     >More Info</a
                   >
                 </div>
@@ -321,7 +321,7 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn--more-info hidden rounded-md bg-[var(--Blue-600)] px-5 py-3 text-white lg:mt-6 lg:inline-block"
+                    class="btn btn--more-info hidden rounded-md border-2 border-transparent bg-[var(--Blue-600)] px-5 py-3 text-white lg:mt-6 lg:inline-block [&:hover,&:focus]:border-[var(--Blue-600)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-600)]"
                     >More Info</a
                   >
                 </div>
@@ -355,7 +355,7 @@
                   </p>
                   <a
                     href="#"
-                    class="btn btn--more-info hidden rounded-md bg-[var(--Blue-600)] px-5 py-3 text-white lg:mt-6 lg:inline-block"
+                    class="btn btn--more-info hidden rounded-md border-2 border-transparent bg-[var(--Blue-600)] px-5 py-3 text-white lg:mt-6 lg:inline-block [&:hover,&:focus]:border-[var(--Blue-600)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-600)]"
                     >More Info</a
                   >
                 </div>
@@ -401,7 +401,7 @@
                 alt=""
               />
               <button
-                class="btn mt-16 w-full border-2 border-transparent bg-[var(--Blue-600)] py-4 text-white lg:hover:border-[var(--Blue-600)] lg:hover:bg-transparent lg:hover:text-[var(--Blue-600)] lg:hover:shadow-xl xl:py-3 xl:text-base"
+                class="btn mt-16 w-full border-2 border-transparent bg-[var(--Blue-600)] py-4 text-white shadow-xl xl:py-3 xl:text-base [&:hover,&:focus]:border-[var(--Blue-600)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-600)]"
                 type="button"
               >
                 Add & Install Extension
@@ -426,7 +426,7 @@
                 alt=""
               />
               <button
-                class="btn mt-16 w-full border-2 border-transparent bg-[var(--Blue-600)] py-4 text-white lg:hover:border-[var(--Blue-600)] lg:hover:bg-transparent lg:hover:text-[var(--Blue-600)] lg:hover:shadow-xl xl:py-3 xl:text-base"
+                class="btn mt-16 w-full border-2 border-transparent bg-[var(--Blue-600)] py-4 text-white shadow-xl xl:py-3 xl:text-base [&:hover,&:focus]:border-[var(--Blue-600)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-600)]"
                 type="button"
               >
                 Add & Install Extension
@@ -451,7 +451,7 @@
                 alt=""
               />
               <button
-                class="btn mt-16 w-full border-2 border-transparent bg-[var(--Blue-600)] py-4 text-white lg:hover:border-[var(--Blue-600)] lg:hover:bg-transparent lg:hover:text-[var(--Blue-600)] lg:hover:shadow-xl xl:py-3 xl:text-base"
+                class="btn mt-16 w-full border-2 border-transparent bg-[var(--Blue-600)] py-4 text-white shadow-xl xl:py-3 xl:text-base [&:hover,&:focus]:border-[var(--Blue-600)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-600)]"
                 type="button"
               >
                 Add & Install Extension
@@ -485,7 +485,7 @@
         >
           <details class="group border-b border-b-[var(--Grey-50)] py-4">
             <summary
-              class="flex cursor-pointer items-center justify-between lg:hover:text-[var(--Red-400)]"
+              class="flex cursor-pointer items-center justify-between [&:hover,&:focus]:text-[var(--Red-400)]"
             >
               <span>What is Bookmark?</span>
               <svg
@@ -510,7 +510,7 @@
           </details>
           <details class="group border-b border-b-[var(--Grey-50)] py-4">
             <summary
-              class="flex cursor-pointer items-center justify-between lg:hover:text-[var(--Red-400)]"
+              class="flex cursor-pointer items-center justify-between [&:hover,&:focus]:text-[var(--Red-400)]"
             >
               <span> How can I request a new browser? </span>
               <svg
@@ -538,7 +538,7 @@
           </details>
           <details class="group border-b border-b-[var(--Grey-50)] py-4">
             <summary
-              class="flex cursor-pointer items-center justify-between lg:hover:text-[var(--Red-400)]"
+              class="flex cursor-pointer items-center justify-between [&:hover,&:focus]:text-[var(--Red-400)]"
             >
               <span>Is there a mobile app?</span>
               <svg
@@ -564,7 +564,7 @@
           </details>
           <details class="group border-b border-b-[var(--Grey-50)] py-4">
             <summary
-              class="flex cursor-pointer items-center justify-between lg:hover:text-[var(--Red-400)]"
+              class="flex cursor-pointer items-center justify-between [&:hover,&:focus]:text-[var(--Red-400)]"
             >
               <span>What about other Chromium browsers?</span>
               <svg
@@ -590,7 +590,7 @@
         </div>
         <a
           href="#"
-          class="btn mt-10 inline-block rounded-md bg-[var(--Blue-600)] px-5 py-3 text-white xl:mt-12"
+          class="btn mt-10 inline-block rounded-md border-2 border-transparent bg-[var(--Blue-600)] px-5 py-3 text-white xl:mt-12 [&:hover,&:focus]:border-[var(--Blue-600)] [&:hover,&:focus]:bg-transparent [&:hover,&:focus]:text-[var(--Blue-600)]"
           >More Info</a
         >
       </section>
@@ -643,7 +643,7 @@
 
           <!-- xl:w-auto -->
           <button
-            class="btn w-full border-2 border-transparent bg-[var(--Red-400)] px-6 py-4 text-white lg:hover:border-[var(--Red-400)] lg:hover:bg-white lg:hover:text-[var(--Red-400)] xl:max-h-13.5 xl:px-4"
+            class="btn w-full border-2 border-transparent bg-[var(--Red-400)] px-6 py-4 text-white xl:max-h-13.5 xl:px-4 [&:hover,&:focus]:border-[var(--Red-400)] [&:hover,&:focus]:bg-white [&:hover,&:focus]:text-[var(--Red-400)]"
             type="submit"
           >
             Contact Us
@@ -686,17 +686,19 @@
             class="flex flex-col gap-6 text-center text-white uppercase lg:flex-row lg:gap-12 xl:gap-8 xl:text-sm"
           >
             <li class="tracking-widest">
-              <a class="lg:hover:text-[var(--Red-400)]" href="#features"
+              <a
+                class="[&:hover,&:focus]:text-[var(--Red-400)]"
+                href="#features"
                 >Features</a
               >
             </li>
             <li class="tracking-widest">
-              <a class="lg:hover:text-[var(--Red-400)]" href="#pricing"
+              <a class="[&:hover,&:focus]:text-[var(--Red-400)]" href="#pricing"
                 >Pricing</a
               >
             </li>
             <li class="tracking-widest">
-              <a class="lg:hover:text-[var(--Red-400)]" href="#contact"
+              <a class="[&:hover,&:focus]:text-[var(--Red-400)]" href="#contact"
                 >Contact</a
               >
             </li>
@@ -713,7 +715,7 @@
               focusable="false"
             >
               <path
-                class="lg:group-hover:fill-[var(--Red-400)]"
+                class="group-hover:fill-[var(--Red-400)] group-focus:fill-[var(--Red-400)]"
                 fill="#FFF"
                 fill-rule="evenodd"
                 d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
@@ -729,7 +731,7 @@
               focusable="false"
             >
               <path
-                class="lg:group-hover:fill-[var(--Red-400)]"
+                class="group-hover:fill-[var(--Red-400)] group-focus:fill-[var(--Red-400)]"
                 fill="#FFF"
                 fill-rule="evenodd"
                 d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
