@@ -103,8 +103,9 @@ function validateForm(e) {
 
 function showError(message) {
   const errorMsg = document.getElementById("error-msg");
-  // const emailInput = document.getElementById("email");
+  const emailInput = document.getElementById("email");
 
+  emailInput.setAttribute("aria-invalid", "true");
   errorMsg.textContent = message;
   errorMsg.classList.remove("hidden");
   errorIcon.classList.remove("hidden");
@@ -113,17 +114,16 @@ function showError(message) {
 
 function hideError() {
   const errorMsg = document.getElementById("error-msg");
-  // const emailInput = document.getElementById("email");
+  const emailInput = document.getElementById("email");
 
+  emailInput.removeAttribute("aria-invalid");
   errorMsg.textContent = "";
   errorMsg.classList.add("hidden");
   errorIcon.classList.add("hidden");
   emailContainer.classList.remove("error-visual");
 }
 
-// add trap focus for nav accessibility
-
-// TODO: for accessibility
+//trap focus for nav accessibility
 function trapFocus(container) {
   const navFocusables = container.querySelectorAll(
     ".nav__home-link, .nav__btn, .nav__link, .nav__social-link",
@@ -159,6 +159,4 @@ function trapFocus(container) {
   return () => container.removeEventListener("keydown", handleNavTrap);
 }
 
-// update form validation dialog to be alert
-// combine hover and focus state on elements
 // test with NVDA also

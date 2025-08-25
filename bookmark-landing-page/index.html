@@ -625,8 +625,11 @@
                 type="email"
                 id="email"
                 name="email"
+                aria-describedby="error-msg"
                 required
                 placeholder="Enter your email address"
+                inputmode="email"
+                autocomplete="email"
               />
               <img
                 src="/images/icon-error.svg"
@@ -637,7 +640,7 @@
             <p
               class="error-msg py-1 pl-2 text-xs text-white italic"
               id="error-msg"
-              aria-live="polite"
+              role="alert"
             ></p>
           </div>
 
