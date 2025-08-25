@@ -8,9 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+    /></noscript>
 
     <link rel="stylesheet" href="/src/style.css" type="text/css" />
 
@@ -142,7 +149,6 @@
         <div
           class="md:grid md:grid-cols-2 xl:mx-auto xl:max-w-290 xl:grid-cols-[35rem_auto] xl:content-center"
         >
-          <!-- <div class=""> -->
           <div
             class="relative mx-auto mt-12 max-w-90 md:self-center lg:max-w-125 xl:mt-0 xl:w-180 xl:max-w-300"
           >
@@ -152,7 +158,6 @@
               alt=""
             />
           </div>
-          <!-- </div> -->
 
           <div
             class="mx-auto max-w-80 md:row-1 lg:max-w-96 xl:mx-0 xl:max-w-135"
@@ -644,7 +649,6 @@
             ></p>
           </div>
 
-          <!-- xl:w-auto -->
           <button
             class="btn w-full border-2 border-transparent bg-[var(--Red-400)] px-6 py-4 text-white xl:max-h-13.5 xl:px-4 [&:hover,&:focus]:border-[var(--Red-400)] [&:hover,&:focus]:bg-white [&:hover,&:focus]:text-[var(--Red-400)]"
             type="submit"
