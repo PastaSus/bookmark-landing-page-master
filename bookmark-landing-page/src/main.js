@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+const nav = document.querySelector(".nav");
 const navBtn = document.querySelector(".nav__btn");
 const navMenu = document.querySelector(".header__nav-menu");
 const overlay = document.querySelector(".overlay");
@@ -12,6 +13,8 @@ const featurePanel = document.querySelectorAll(".feature__panel");
 const form = document.querySelector(".form");
 const emailContainer = document.querySelector(".email__container");
 const errorIcon = document.querySelector(".error-icon");
+
+let removeTrapFocus; //cleanup variable for trap
 
 navBtn.addEventListener("click", openCloseNav);
 
@@ -27,9 +30,9 @@ function openCloseNav() {
   const logoText = headerLogo.querySelector(".logo__text");
   const bookmarkIcon = headerLogo.querySelector(".logo__bookmark-icon");
 
-  const isOpen = hamburger.src.includes("icon-hamburger.svg");
+  const isClose = hamburger.src.includes("icon-hamburger.svg");
 
-  hamburger.src = isOpen
+  hamburger.src = isClose
     ? "/images/icon-close.svg"
     : "/images/icon-hamburger.svg";
 
@@ -37,14 +40,23 @@ function openCloseNav() {
   navMenu.classList.toggle("hidden");
   body.classList.toggle("no-scroll");
 
-  navBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  navBtn.setAttribute("aria-expanded", isClose ? "true" : "false");
 
-  logoCircle.setAttribute("fill", isOpen ? "#fff" : "#5267DF");
-  logoText.setAttribute("fill", isOpen ? "#fff" : "#242A45");
-  bookmarkIcon.setAttribute("fill", isOpen ? "#242A45" : "#fff");
+  logoCircle.setAttribute("fill", isClose ? "#fff" : "#5267DF");
+  logoText.setAttribute("fill", isClose ? "#fff" : "#242A45");
+  bookmarkIcon.setAttribute("fill", isClose ? "#242A45" : "#fff");
 
-  headerSocials.classList.toggle("hidden", !isOpen);
-  headerSocials.classList.toggle("flex", isOpen);
+  headerSocials.classList.toggle("hidden", !isClose);
+  headerSocials.classList.toggle("flex", isClose);
+
+  if (isClose) {
+    removeTrapFocus = trapFocus(nav);
+  } else {
+    if (removeTrapFocus) {
+      removeTrapFocus();
+      removeTrapFocus = null;
+    }
+  }
 }
 
 function handleTabClick(e) {
@@ -107,4 +119,42 @@ function hideError() {
   errorMsg.classList.add("hidden");
   errorIcon.classList.add("hidden");
   emailContainer.classList.remove("error-visual");
+}
+
+// add trap focus for nav accessibility
+
+// TODO: for accessibility
+function trapFocus(container) {
+  const navFocusables = container.querySelectorAll(
+    ".nav__home-link, .nav__btn, .nav__link, .nav__social-link",
+  );
+
+  const firstEl = navFocusables[0];
+  const lastEl = navFocusables[navFocusables.length - 1];
+
+  function handleNavTrap(e) {
+    const isMobile = window.innerWidth < 768;
+
+    if (e.key !== "Tab") return;
+
+    // check width at the moment of keydown
+    if (!isMobile) return;
+
+    // e.shiftKey - shift + tab condition
+    if (e.shiftKey) {
+      if (document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      }
+    } else {
+      if (document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    }
+  }
+
+  container.addEventListener("keydown", handleNavTrap);
+
+  return () => container.removeEventListener("keydown", handleNavTrap);
 }

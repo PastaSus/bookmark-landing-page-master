@@ -170,7 +170,7 @@
   }
 
   .purple-bg {
-    @apply absolute top-[17%] right-[-20%] z-[-1] h-[200px] w-full rounded-[300px_0_0_300px] bg-[hsl(231,69%,60%)];
+    @apply absolute top-[17%] right-[-18%] z-[-1] h-[210px] w-full rounded-[300px_0_0_300px] bg-[hsl(231,69%,60%)];
   }
 
   .purple-bg--left {
