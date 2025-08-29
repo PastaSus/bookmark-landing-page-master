@@ -48,6 +48,7 @@ Users should be able to:
 - Vite
 - Vercel
 - Axe Dev Tools
+- NVDA (screen reader)
 
 ### What I learned
 
